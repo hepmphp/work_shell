@@ -4,7 +4,7 @@
 #History
 #Path
 
-bak_dir=/data/backup/daily/ #backup dir  
+bak_dir=/data/backup/mysql/daily/ #backup dir  
 bin_dir=/data/mysql/ #binlog dir
 log_file=/data/backup/dailybackup.log #back log file
 bin_file=/data/mysql/bin.index  #binlog index

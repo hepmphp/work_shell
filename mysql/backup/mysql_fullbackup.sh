@@ -12,8 +12,8 @@ db_names="test  wiki" #备份多个数据库
 ip=localhost
 
 #db dir
-bak_dir=/data/backup/
-log_file=/data/backup/mysql_fullbackup.log
+bak_dir=/data/backup/mysql/
+log_file=/data/backup/mysql/mysql_fullbackup.log
 date=`date +%Y%m%d`
 
 
