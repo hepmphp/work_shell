@@ -18,3 +18,7 @@
 4. 登录
 
   - `ssh -p 22 47.100.14.234 -i /root/.ssh/id_rsa_rsync`  
+5. 免输入证书密码
+- 启动客户端 eval `ssh-agent`
+- 添加证书 ssh-add ~/.ssh/id_rsa_rsync
+   
