@@ -1,7 +1,7 @@
 #!/bin/bash
 log_path=/data/log/youxi53/sdkweblog/sdk.log
 domain="youxi53.com"
-email="306863208@qq.com"
+email="xxx@qq.com"
 maketime=`date +%Y-%m-%d" "%H":"%M`
 logdate=`date -d "yesterday" +%Y-%m-%d`
 total_visit=`wc -l ${log_path} | awk '{print $1}'`
