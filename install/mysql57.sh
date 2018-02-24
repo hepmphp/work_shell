@@ -154,6 +154,7 @@ source /etc/profile
 
 #/bin/mkdir -p /var/lib/mysql
 #ln -s /usr/local/mysql/var/mysql.sock /var/lib/mysql/mysql.sock
+#mysql -h localhost -u root -p
 #mysql -e "SET PASSWORD = PASSWORD('123456');"
 #mysql -p123456 -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'password' WITH GRANT OPTION;"
 #mysql -p123456 -e "FLUSH PRIVILEGES;"
