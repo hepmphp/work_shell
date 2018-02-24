@@ -1,3 +1,4 @@
+cat > /etc/my.cnf << EOF
 [client]
 user=mysql
 password=123456
@@ -101,3 +102,4 @@ binlog_gtid_simple_recovery=1
 log_timestamps=system               
 #transaction_write_set_extraction=MURMUR32 
 show_compatibility_56=on
+EOF
