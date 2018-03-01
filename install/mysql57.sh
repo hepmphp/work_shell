@@ -154,6 +154,15 @@ source /etc/profile
 
 #/bin/mkdir -p /var/lib/mysql
 #ln -s /usr/local/mysql/var/mysql.sock /var/lib/mysql/mysql.sock
+#mysql -h localhost -u root -p
 #mysql -e "SET PASSWORD = PASSWORD('123456');"
 #mysql -p123456 -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'password' WITH GRANT OPTION;"
 #mysql -p123456 -e "FLUSH PRIVILEGES;"
+
+#安装过程报错 内存不足导致 先停止其它服务 释放内存
+#c++: Internal error: Killed (program cc1plus)
+#Please submit a full bug report.
+#See <http://bugzilla.redhat.com/bugzilla> for instructions.
+#make[2]: *** [sql/CMakeFiles/sql.dir/item_geofunc.cc.o] Error 1
+#make[1]: *** [sql/CMakeFiles/sql.dir/all] Error 2
+#make: *** [all] Error 2
