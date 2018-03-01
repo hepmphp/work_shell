@@ -91,7 +91,7 @@ http {
 }
 EOF
 
-cat > /usr/local/nginx/vhosts/www.test.conf <<EOF
+cat > /usr/local/nginx/conf/vhosts/www.test.conf <<EOF
 server {
 	listen       80;
 	server_name www.test.com;
