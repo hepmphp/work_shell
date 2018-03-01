@@ -3,7 +3,7 @@
 yum -y install gcc gcc-c++ autoconf automake zlib zlib-devel openssl openssl-devel pcre-devel
 
 #新建web
-useradd -d /dev/null -s /sbin/nologin www -u2001
+useradd -d /dev/null -s /sbin/nologin webuser -u2001
 
 cd /usr/local/src
 wget http://nginx.org/download/nginx-1.10.3.tar.gz
@@ -138,7 +138,7 @@ server {
 EOF
 
 
-cat > /usr/local/nginx/sbin/logcron.sh <<EOF
+cat > /usr/local/nginx/sbin/logcron.sh  <<EOF 
 #!/bin/bash
 # This script run at 00:00
 # The Nginx logs path
@@ -164,12 +164,13 @@ do
 
 done
 #Reopen Nginx logs file
-kill -USR1 `cat  /usr/local/nginx/var/nginx.pid`
+kill -USR1 \`cat  /usr/local/nginx/var/nginx.pid\`
 
 #remind the file of log
 find /data/logs/*/access*.log -mtime +60 |xargs rm -f
 find /data/logs/*/error*.log -mtime +120 |xargs rm -f
-EOF
+EOF 
+
 
 #将 logcron.sh 加入定时任务
 echo "0 0 * * * /bin/bash  /usr/local/nginx/sbin/logcron.sh" >> /var/spool/cron/root
