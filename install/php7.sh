@@ -78,7 +78,8 @@ sed -i 's/max_execution_time = 30/max_execution_time = 300/' /usr/local/php/etc/
 sed -i 's/max_input_time = 30/max_input_time = 300/' /usr/local/php/etc/php.ini
 sed -i 's/post_max_size = 8M/post_max_size = 32M/' /usr/local/php/etc/php.ini
 echo 'date.timezone = Asia/Shanghai'>> /usr/local/php/etc/php.ini
-sed -i '/\[mbstring\]/a\mbstring.func_overload=2' /usr/local/php/etc/php.ini
+sed -i '/\[Date\]/a\date.timezone = Asia/Shanghai' /usr/local/php/etc/php.ini
+#sed -i '/\[mbstring\]/a\mbstring.func_overload=2' /usr/local/php/etc/php.ini
 
 #设置 OPcache 缓存：
 sed '/\[opcache\]/a\zend_extension=/usr/local/php/lib/php/extensions/no-debug-zts-20160303/opcache.so \n opcache.memory_consumption=128\n opcache.interned_strings_buffer=8\n opcache.max_accelerated_files=4000\n opcache.revalidate_freq=60\n opcache.fast_shutdown=1\n opcache.enable_cli=1' /usr/local/php/etc/php.ini 
