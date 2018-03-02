@@ -16,7 +16,7 @@ function page_401(){
 
 /****身份验证****/
 $accounts = array(
-    'hepm' => 'hepm$%*)@mele.com',
+    'hepm' => '123456',
 );
 if(isset($_GET['logout'])){
     session_clearn();
