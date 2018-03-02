@@ -27,7 +27,7 @@ cat >/etc/systemd/system/redis.service <<EOF
 [Unit]
 Description=Redis on port 6379
 [Service]
-Type=forking
+#Type=forking
 ExecStart=/etc/init.d/redis start
 ExecStop=/etc/init.d/redis stop
 [Install]

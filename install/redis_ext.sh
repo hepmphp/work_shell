@@ -6,10 +6,9 @@ zend_ext="${zend_ext_dir}redis.so"
 if [ -s "${zend_ext}" ]; then
     rm -f "${zend_ext}"
 fi 
-rm -rf phpredis
-git clone -b php7 https://github.com/phpredis/phpredis.git
-cd phpredis
-
+wget http://pecl.php.net/get/redis-4.0.0RC1.tgz
+tar -zxvf redis-4.0.0RC1.tgz 
+cd redis-4.0.0RC1
 /usr/local/php/bin/phpize
 ./configure --with-php-config=/usr/local/php/bin/php-config
 make && make install
