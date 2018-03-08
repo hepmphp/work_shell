@@ -22,4 +22,5 @@
 - 启动客户端  eval `ssh-agent`
 - 执行命令 ssh-agent bash
 - 添加证书 ssh-add ~/.ssh/id_rsa_rsync
+- 查看证书 ssh-add -l
    
