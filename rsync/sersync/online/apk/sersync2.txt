@@ -1,0 +1,1 @@
+/usr/local/webserver/sersync/sersync2 -m command -d -o /usr/local/webserver/sersync/htdocs_chmod.xml
