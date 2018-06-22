@@ -9,7 +9,7 @@ cd /usr/local/src
 wget http://nginx.org/download/nginx-1.10.3.tar.gz
 tar xzvf nginx-1.10.3.tar.gz
 cd nginx-1.10.3
-./configure --prefix=/usr/local/nginx --with-http_stub_status_module --with-debug 
+./configure --prefix=/usr/local/nginx --with-http_stub_status_module --with-debug  --with-http_ssl_module
 make && make install
 
 #设置日志切割脚本每日切割日志，配置日志切割脚本
