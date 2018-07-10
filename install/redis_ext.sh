@@ -12,6 +12,7 @@ cd redis-4.0.0RC1
 /usr/local/php/bin/phpize
 ./configure --with-php-config=/usr/local/php/bin/php-config
 make && make install
+#echo  'extension_dir = "/usr/local/php5.6.36/lib/php/extensions/no-debug-zts-20131226/"' >>/usr/local/php5.6.36/etc/php.ini
 echo  'extension = "redis.so"' >>/usr/local/php/etc/php.ini
 systemctl restart php-fpm.service 
  
