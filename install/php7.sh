@@ -122,7 +122,8 @@ After=syslog.target network.target
 [Service]
 Type=simple
 PIDFile=/usr/local/php/var/run/php-fpm.pid
-ExecStart=/usr/local/php/sbin/php-fpm --nodaemonize --fpm-config /usr/local/php/etc/php-fpm.conf
+ExecStart=/usr/local/php/sbin/php-fpm --nodaemonize --fpm-config /usr/local/php/etc/php-fpm.conf  -c /usr/local/php/etc/php.ini
+
 ExecReload=/bin/kill -USR2 $MAINPID
 
 [Install]
