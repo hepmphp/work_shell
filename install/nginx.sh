@@ -3,7 +3,7 @@
 yum -y install gcc gcc-c++ autoconf automake zlib zlib-devel openssl openssl-devel pcre-devel
 
 #新建web
-useradd -d /dev/null -s /sbin/nologin webuser -u2001
+#useradd -d /dev/null -s /sbin/nologin webuser -u2001
 
 cd /usr/local/src
 wget http://nginx.org/download/nginx-1.10.3.tar.gz
@@ -26,7 +26,7 @@ mkdir -p /data/logs/www.test.com/
 #备份并修改nginx.conf
 mv /usr/local/nginx/conf/nginx.conf /usr/local/nginx/conf/nginx.conf.bak
 cat > /usr/local/nginx/conf/nginx.conf << EOF
-user  webuser;
+user  nobody;
 worker_processes  2;
 
 error_log  /data/logs/error.log error;
