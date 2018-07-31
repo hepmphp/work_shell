@@ -166,3 +166,5 @@ source /etc/profile
 #make[2]: *** [sql/CMakeFiles/sql.dir/item_geofunc.cc.o] Error 1
 #make[1]: *** [sql/CMakeFiles/sql.dir/all] Error 2
 #make: *** [all] Error 2
+# mkdir -p /usr/local/boost && wget http://www.sourceforge.net/projects/boost/files/boost/1.59.0/boost_1_59_0.tar.gz
+# -DWITH_BOOST=/usr/local/boost
