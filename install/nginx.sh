@@ -26,7 +26,7 @@ mkdir -p /data/logs/www.test.com/
 #备份并修改nginx.conf
 mv /usr/local/nginx/conf/nginx.conf /usr/local/nginx/conf/nginx.conf.bak
 cat > /usr/local/nginx/conf/nginx.conf << EOF
-user  nobody;
+user  webuser;
 worker_processes  2;
 
 error_log  /data/logs/error.log error;
