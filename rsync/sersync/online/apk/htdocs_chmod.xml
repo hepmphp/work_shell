@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<head version="2.5">
+	<host hostip="localhost" port="8008"></host>
+	<filter start="true">
+		<exclude expression=".*\.svn"></exclude>
+		<exclude expression=".*\.db"></exclude>
+		<exclude expression=".*\.log"></exclude>
+		<exclude expression=".*/Cache/.*"></exclude>
+		<exclude expression=".*/cache/.*"></exclude>
+		<exclude expression=".*/backupfiles/.*"></exclude>
+	</filter>
+	<inotify>
+		<delete start="false"/>
+		<createFolder start="true"/>
+		<createFile start="false"/>
+		<closeWrite start="true"/>
+		<moveFrom start="true"/>
+		<moveTo start="true"/>
+		<attrib start="false"/>
+		<modify start="false"/>
+	</inotify>
+	<debug start="false"/>
+	<fileSystem xfs="false"/>
+	<sersync>
+		<localpath watch="/data/htdocs">
+		</localpath>
+		<plugin start="true" name="command"/><!--启用插件 执行shell脚本-->
+	</sersync>
+	<plugin name="command">
+		<param prefix="/usr/local/scripts/chfilemod.sh" suffix="" ignoreError="true"/>
+		<filter start="false">
+		    <include expression="(.*)\.db"/>
+		</filter>
+	</plugin>
+</head>

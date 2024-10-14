@@ -1,0 +1,33 @@
+--  /etc/lsyncd.conf 
+-- 效果和执行命令一样
+-- rsync -avH --port=873 --progress --delete /data/www/www.test.com/ rsync_user1@47.100.14.234::www.test.com --password-file=/etc/passwd_rsync.txt
+-- User configuration file for lsyncd.
+--
+-- Simple example for default rsync, but executing moves through on the target.
+--
+-- For more examples, see /usr/share/doc/lsyncd*/examples/
+-- 
+-- sync{default.rsyncssh, source="/var/www/html", host="localhost", targetdir="/tmp/htmlcopy/"}
+
+settings{
+   logfile = "/var/log/lsyncd.log",
+   statusFile = "/tmp/lsyncd.stat",
+   statusInterval = 1,
+}
+sync{
+   default.rsync,
+   source="/data/www/www.test.com/",
+   target="rsync_user1@47.100.14.234::www.test.com",
+   delete="running",
+   exclude = {".*",".tmp"},
+   delay = 30,
+   rsync     = {
+	binary    = "/usr/bin/rsync",
+	archive   = true,
+	compress  = true,
+	verbose   = true,
+        password_file = "/etc/passwd_rsync.txt",
+        _extra = {"--bwlimit=2000"}
+   }
+}
+
